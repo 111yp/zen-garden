@@ -1,49 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Condensed&display=swap%27);
+
+.page-wrapper, html {
+    background: linear-gradient(45deg, #2A326D, #00885a, #2A326D,#00885a);
+    background-size: 400% 400%;
+    background-color: #010101;
+    animation: gradient 20s ease infinite;
+    color:white;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 	font-size: 100%;
+}
+body {
+	font-family: 'Roboto';
+}
+a, p, header, h2 {
+	text-decoration: none;
+	font-family: 'Roboto Condensed';
+}
+h1 {
+	font-size: 4rem;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
+}
+:root{
+    --blue: #2A326D;
+    --cyan: #4F9FBC;
+    --yellow:#F3CF0C;
+    --tan:#DABD8F;
+    --red:#D90906;
+    --brown:#B28069;
 }
 
-.intro {
-	
-	background-color:red;
+.summary {
+    background-color:var(--red);
+}
+.preamble {
+    background-color:(--red);
 }
 .explanation{
-	
-	background-color:blue;
+
+    background-color:var(--brown);
 }
 
 .participation {
-	
-	background-color:green;
+
+	background-color:var(--tan);
 }
 
 .benefits {
-	
-	background-color:yellow;
+
+    background-color:var(--yellow);
 }
 
 .requirements {
-	background-color: pink;
+
+    background-color:var(--cyan);
+}
+
+.requirements, .participation, .preamble {
+	padding: 1rem 1rem 1rem 30%;
+}
+
+.benefits, .explanation, .summary {
+	padding: 1rem 30% 1rem 1rem;
 }
 
 .sidebar {
-	background-color: orange;
+
+    background-color:var(--blue);
+}
+
+.intro h1 {
+
 }
 
 @media screen and (min-width: 350px);
 .page-wrapper {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-auto-rows: minmax(100px, auto);
-	/* grid-template-areas: 
-	  "title"
-	  ""
-	  ; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+      ;
 }
-
